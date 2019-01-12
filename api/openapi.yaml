@@ -1,0 +1,171 @@
+openapi: 3.0.0
+servers:
+  - description: MirMusic Agent
+    url: http://localhost:8013
+info:
+  description: MirMusic Agent API
+  version: "1.0.0"
+  title: MirMusic API
+  contact:
+    email: alimy@gility.net
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+paths:
+  /v1/appinfo:
+    get:
+      summary: get application info
+      operationId: getAppInfo
+      description: |
+        Get application information
+      responses:
+        '200':
+          description: get application info
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AppInfo'
+  /v1/albums:
+    get:
+      summary: get albums
+      operationId: getAlbums
+      description: |
+        Get available albums in the system
+      responses:
+        '200':
+          description: get albums results
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AlbumsItem'
+        '400':
+          description: no contents
+    put:
+      summary: create an albums
+      operationId: createAlbums
+      description: |
+        Create an albums to system
+      responses:
+        '201':
+          description: item created
+        '400':
+          description: 'invalid input, object invalid'
+        '409':
+          description: an existing item already exists
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AlbumsItem'
+        description: Albums item to add
+    post:
+      summary: update an albums
+      operationId: updateAlbums
+      description: |
+        Update an albums to system
+      responses:
+        '201':
+          description: item updated
+        '400':
+          description: 'invalid input, object invalid'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AlbumsItem'
+        description: Albums item to update
+  '/v1/albums/{albumId}':
+    get:
+      summary: Get album by ID
+      description: Returns a single album
+      operationId: getAlbumById
+      parameters:
+        - name: albumId
+          in: path
+          description: ID of album to return
+          required: true
+          schema:
+            type: string
+            format: uuid
+            example: d290f1ee-6c54-4b01-90e6-d701748f0851
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AlbumsItem'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Album not found
+    delete:
+      summary: Delete an albums
+      description: Delete an albums
+      operationId: deleteAlbum
+      parameters:
+        - name: albumId
+          in: path
+          description: ID of album to be deleted
+          required: true
+          schema:
+            type: string
+            format: uuid
+            example: d290f1ee-6c54-4b01-90e6-d701748f0851
+      responses:
+        '200':
+          description: Item deleted
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Album not found
+components:
+  schemas:
+    AppInfo:
+      type: object
+      required:
+        - profiles
+        - services
+      properties:
+        profiles:
+          type: string
+          example: mir-music
+        services:
+          type: string
+          example: albums infomation
+    AlbumsItem:
+      type: object
+      required:
+        - id
+        - title
+        - artist
+        - releaseYear
+        - genre
+        - trackCount
+        - albumId
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        title:
+          type: string
+          example: Nevermind
+        artist:
+          type: string
+          example: Nirvana
+        releaseYear:
+          type: string
+          example: 1991
+        genre:
+          type: string
+          example: Rock
+        trackCount:
+          type: integer
+          format: int32
+          minimum: 0
+        albumId:
+          type: string
+          example: null

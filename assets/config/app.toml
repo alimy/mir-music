@@ -1,0 +1,6 @@
+[application]
+name = "mir-music"
+version = "0.0.0"
+authors = ["Michael Li <alimy@gility.net>"]
+description = "music infomation service"
+license = "Apache-2.0"
