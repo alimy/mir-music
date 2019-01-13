@@ -13,3 +13,10 @@ $ make serve # visit in browser http://localhost:8013/
 ```bash
 $ make api # if success you can browser api document in http://localhost:8080
 ```
+
+### Screen Shot
+* Card Mode
+![screenshot_index_c](https://raw.githubusercontent.com/alimy/mir-music/master/docs/pictures/screenshot_index_c.png)
+
+* List Mode
+![screenshot_index_l](https://raw.githubusercontent.com/alimy/mir-music/master/docs/pictures/screenshot_index_l.png)
