@@ -1,4 +1,4 @@
-# GinMusic
+# MirMusic
 Just a sample code use [Mir](https://github.com/alimy/mir) and [Gin](http://github.com/gin-gonic/gin) provide sample music info.
 This project is inspiration like [spring-music](https://github.com/cloudfoundry-samples/spring-music)
 
