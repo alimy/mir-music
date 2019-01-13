@@ -20,3 +20,6 @@ $ make api # if success you can browser api document in http://localhost:8080
 
 * List Mode
 ![screenshot_index_l](https://raw.githubusercontent.com/alimy/mir-music/master/docs/pictures/screenshot_index_l.png)
+
+* OpenApi of music 
+![screenshot_openapi](https://raw.githubusercontent.com/alimy/mir-music/master/docs/pictures/screenshot_openapi.png)
