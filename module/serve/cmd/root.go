@@ -92,5 +92,7 @@ func setup() {
 	}
 
 	// initial models with MemoryProfile
-	models.Register(models.MemoryProfile)
+	if err := models.Register(models.MemoryProfile); err != nil {
+		panic(err)
+	}
 }

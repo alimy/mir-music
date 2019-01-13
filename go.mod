@@ -6,6 +6,7 @@ require (
 	github.com/alimy/mir/module/gin v0.0.0-20190112110307-fff611047ebf
 	github.com/elazarl/go-bindata-assetfs v1.0.0
 	github.com/gin-gonic/gin v1.3.0
+	github.com/google/uuid v1.1.0
 	github.com/pkg/errors v0.8.0
 	github.com/spf13/cobra v0.0.3
 	github.com/spf13/pflag v1.0.3 // indirect

@@ -13,34 +13,54 @@ var (
 
 // Repository data operator
 type Repository interface {
-	Create(int, RecyclableCrud) error
-	Retrieve(int, RecyclableCrud) error
-	Update(int, RecyclableCrud) error
-	Delete(int, RecyclableCrud) error
+	Create(int, RecyclableCreate) error
+	Retrieve(int, RecyclableRetrieve) error
+	Update(int, RecyclableUpdate) error
+	Delete(int, RecyclableDelete) error
 }
 
 // OnRepository data operator
 type OnRepository interface {
-	OnCreate(RecyclableCrud) error
-	OnRetrieve(RecyclableCrud) error
-	OnUpdate(RecyclableCrud) error
-	OnDelete(RecyclableCrud) error
+	OnCreate(RecyclableCreate) error
+	OnRetrieve(RecyclableRetrieve) error
+	OnUpdate(RecyclableUpdate) error
+	OnDelete(RecyclableDelete) error
 }
 
 // Template mode data template operator
 type Template interface {
-	Create(RecyclableCrud) error
-	Retrieve(RecyclableCrud) error
-	Update(RecyclableCrud) error
-	Delete(RecyclableCrud) error
+	Create(RecyclableCreate) error
+	Retrieve(RecyclableRetrieve) error
+	Update(RecyclableUpdate) error
+	Delete(RecyclableDelete) error
+}
+
+// CrudCreate create mode data operator
+type CrudCreate interface {
+	Create() error
+}
+
+// CrudRetrieve retrieve mode data operator
+type CrudRetrieve interface {
+	Retrieve() error
+}
+
+// CrudUpdate update mode data operator
+type CrudUpdate interface {
+	Update() error
+}
+
+// CrudDelete delete mode data operator
+type CrudDelete interface {
+	Delete() error
 }
 
 // Crud mode data operator
 type Crud interface {
-	Create() error
-	Retrieve() error
-	Update() error
-	Delete() error
+	CrudCreate
+	CrudRetrieve
+	CrudUpdate
+	CrudDelete
 }
 
 // Recycler used for Recycle(...)
@@ -51,6 +71,30 @@ type Recycler interface {
 // RecyclableCrud Crud and Recycler interface
 type RecyclableCrud interface {
 	Crud
+	Recycler
+}
+
+// RecyclableCreate interface
+type RecyclableCreate interface {
+	CrudCreate
+	Recycler
+}
+
+// RecyclableRetrieve interface
+type RecyclableRetrieve interface {
+	CrudRetrieve
+	Recycler
+}
+
+// RecyclableUpdate interface
+type RecyclableUpdate interface {
+	CrudUpdate
+	Recycler
+}
+
+// RecyclableDelete interface
+type RecyclableDelete interface {
+	CrudDelete
 	Recycler
 }
 
@@ -82,26 +126,26 @@ func Model(id int) interface{} {
 }
 
 // Recycle put a RecyclableCrud of id
-func Recycle(id int, model RecyclableCrud) {
+func Recycle(id int, model Recycler) {
 	modelPools[id].Put(model)
 }
 
 // Create mode by id
-func Create(id int, model RecyclableCrud) error {
+func Create(id int, model RecyclableCreate) error {
 	return repository.Create(id, model)
 }
 
 // Retrieve mode by id
-func Retrieve(id int, model RecyclableCrud) error {
+func Retrieve(id int, model RecyclableRetrieve) error {
 	return repository.Retrieve(id, model)
 }
 
 // Update model by id
-func Update(id int, model RecyclableCrud) error {
+func Update(id int, model RecyclableUpdate) error {
 	return repository.Update(id, model)
 }
 
 // Delete mode by id
-func Delete(id int, model RecyclableCrud) error {
+func Delete(id int, model RecyclableDelete) error {
 	return repository.Delete(id, model)
 }
