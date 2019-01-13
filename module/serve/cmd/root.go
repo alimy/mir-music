@@ -77,12 +77,11 @@ func serveRun(cmd *cobra.Command, args []string) {
 	}
 }
 
+// register entries to *gin.Engine by mir
 func registerApi(e *gin.Engine) {
-	// setup mir use *gin.Engine first
-	mir.Setup(ginE.Mir(e))
-	// register entries to *gin.Engine by mir
 	entries := openapi.MirEntries()
-	mir.Register(entries...)
+	mirE := ginE.Mir(e)
+	mir.Register(mirE, entries...)
 }
 
 func setup() {

@@ -2,8 +2,8 @@ module github.com/alimy/mir-music
 
 require (
 	github.com/BurntSushi/toml v0.3.1
-	github.com/alimy/mir v0.0.0-20190112160240-5ef1442297f4
-	github.com/alimy/mir/module/gin v0.0.0-20190112110307-fff611047ebf
+	github.com/alimy/mir v0.1.1-0.20190113144103-39e136f8bdd7
+	github.com/alimy/mir/module/gin v0.0.0-20190113152108-8449096086b4
 	github.com/elazarl/go-bindata-assetfs v1.0.0
 	github.com/gin-gonic/gin v1.3.0
 	github.com/google/uuid v1.1.0
