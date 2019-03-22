@@ -1,0 +1,3 @@
+package assets
+
+//go:generate go-bindata -nomemcopy -pkg=assets -ignore=README.md -prefix=../../assets -debug=false -o=assets_gen.go ../../assets/...

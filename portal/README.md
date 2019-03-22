@@ -1,1 +1,0 @@
-## This directory contains the Web UI resource
