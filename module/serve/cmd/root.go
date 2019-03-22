@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"github.com/alimy/mir"
 	"github.com/alimy/mir-music/cmd"
 	"github.com/alimy/mir-music/models"
 	"github.com/alimy/mir-music/module/serve/openapi"
@@ -11,7 +10,7 @@ import (
 	"net/http"
 	"time"
 
-	ginE "github.com/alimy/mir/module/gin"
+	mirE "github.com/alimy/mir/module/gin"
 )
 
 const (
@@ -80,8 +79,7 @@ func serveRun(cmd *cobra.Command, args []string) {
 // register entries to *gin.Engine by mir
 func registerApi(e *gin.Engine) {
 	entries := openapi.MirEntries()
-	mirE := ginE.Mir(e)
-	mir.Register(mirE, entries...)
+	mirE.Register(e, entries...)
 }
 
 func setup() {
