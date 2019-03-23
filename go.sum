@@ -3,11 +3,9 @@ github.com/alimy/mir v0.7.1-0.20190131170907-cc17eb310d29 h1:6ZyxhKP+iAMF31bii4w
 github.com/alimy/mir v0.7.1-0.20190131170907-cc17eb310d29/go.mod h1:JIZY+q16FJKFNm2/a9KgUmYpa6SpsT9i7hafdg7xBhQ=
 github.com/alimy/mir/module/gin v0.0.0-20190321111739-2009da5a1a34 h1:YekTumoO++ttJK/vl9W/Axrxe9XOeIDgmIf/FeUFOl4=
 github.com/alimy/mir/module/gin v0.0.0-20190321111739-2009da5a1a34/go.mod h1:dcBwULe+yzWG9zHcrwHpLU6X89WfZ7W9di/ENegp4eQ=
-github.com/alimy/music-ui v1.0.0 h1:etfeEk3w8ABQi9pmeBA0sK+zwkaU66Dr1/1dbpwrxUU=
-github.com/alimy/music-ui v1.0.0/go.mod h1:rNC0wjiRL6MHAsbTXMVCwC+NEpsHjVgGRhGxR5Zg0YQ=
+github.com/alimy/music-ui v1.0.2 h1:jVZhXSnO6Dhlm6GzXjuYXhtuMeL60swbSo2BddWhzz0=
+github.com/alimy/music-ui v1.0.2/go.mod h1:rNC0wjiRL6MHAsbTXMVCwC+NEpsHjVgGRhGxR5Zg0YQ=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/elazarl/go-bindata-assetfs v1.0.0 h1:G/bYguwHIzWq9ZoyUQqrjTmJbbYn3j3CKKpKinvZLFk=
-github.com/elazarl/go-bindata-assetfs v1.0.0/go.mod h1:v+YaWX3bdea5J/mo8dSETolEo7R71Vk1u8bnjau5yw4=
 github.com/fsnotify/fsnotify v1.4.7/go.mod h1:jwhsz4b93w/PPRr/qN1Yymfu8t87LnFCMoQvtojpjFo=
 github.com/gin-contrib/sse v0.0.0-20170109093832-22d885f9ecc7 h1:AzN37oI0cOS+cougNAV9szl6CVoj2RYwzS3DpUQNtlY=
 github.com/gin-contrib/sse v0.0.0-20170109093832-22d885f9ecc7/go.mod h1:VJ0WA2NBN22VlZ2dKZQPAPnyWw5XTlK1KymzLKsr59s=
@@ -32,8 +30,8 @@ github.com/spf13/pflag v1.0.3/go.mod h1:DYY7MBk1bdzusC3SYhjObp+wFpr4gzcvqqNjLnIn
 github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
 github.com/ugorji/go/codec v0.0.0-20181209151446-772ced7fd4c2 h1:EICbibRW4JNKMcY+LsWmuwob+CRS1BmdRdjphAm9mH4=
 github.com/ugorji/go/codec v0.0.0-20181209151446-772ced7fd4c2/go.mod h1:VFNgLljTbGfSG7qAOspJ7OScBnGdDN/yBr0sguwnwf0=
-github.com/unisx/logus v0.2.2 h1:edCfBAOZdJafI/QmPRU/Lb3Ky8lEIUbGqIuXJn+PAQk=
-github.com/unisx/logus v0.2.2/go.mod h1:zfSpWYJHYf/YfnwhLO6Ydqy7vnIV6A98+LnTVNauWMY=
+github.com/unisx/logus v0.3.0 h1:u6ZmZ3gPqs/Iw4dIElHNAlvuPkOI9K5HGTVEsN7LuyE=
+github.com/unisx/logus v0.3.0/go.mod h1:zfSpWYJHYf/YfnwhLO6Ydqy7vnIV6A98+LnTVNauWMY=
 go.uber.org/atomic v1.3.2 h1:2Oa65PReHzfn29GpvgsYwloV9AVFHPDk8tYxt2c2tr4=
 go.uber.org/atomic v1.3.2/go.mod h1:gD2HeocX3+yG+ygLZcrzQJaqmWj9AIm7n08wl/qW/PE=
 go.uber.org/multierr v1.1.0 h1:HoEmRHQPVSqub6w2z2d2EOVs2fjyFRGyofhKuyDq0QI=

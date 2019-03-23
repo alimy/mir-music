@@ -5,7 +5,6 @@ package openapi
 import (
 	"github.com/alimy/mir"
 	"github.com/alimy/music-ui/dist"
-	"github.com/elazarl/go-bindata-assetfs"
 	"net/http"
 )
 
@@ -40,12 +39,9 @@ func (p *portalAssets) HeadStaticAssets(c Context) {
 
 // mirPortal return a portal mir entry
 func mirPortal() interface{} {
-	assetFS := &assetfs.AssetFS{
-		Asset:     dist.Asset,
-		AssetDir:  dist.AssetDir,
-		AssetInfo: dist.AssetInfo}
+	assetFile := dist.AssetFile()
 	return &portalAssets{
-		mainHandler:   http.StripPrefix("/", http.FileServer(assetFS)),
-		staticHandler: http.StripPrefix("/static", http.FileServer(assetFS)),
+		mainHandler:   http.StripPrefix("/", http.FileServer(assetFile)),
+		staticHandler: http.StripPrefix("/static", http.FileServer(assetFile)),
 	}
 }
