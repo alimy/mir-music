@@ -2,6 +2,6 @@
 
 package openapi
 
-func mirPortal() interface{} {
+func MirPortal() interface{} {
 	return nil
 }

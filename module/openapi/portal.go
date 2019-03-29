@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-type portalAssets struct {
+type PortalAssets struct {
 	mainHandler      http.Handler
 	staticHandler    http.Handler
 	getMainAssets    mir.Get  `mir:"/"`
@@ -18,29 +18,29 @@ type portalAssets struct {
 }
 
 // GetMainAssets GET handler of "/"
-func (p *portalAssets) GetMainAssets(c Context) {
+func (p *PortalAssets) GetMainAssets(c Context) {
 	p.mainHandler.ServeHTTP(c.Writer, c.Request)
 }
 
 // HeadMainAssets HEAD handler of "/"
-func (p *portalAssets) HeadMainAssets(c Context) {
+func (p *PortalAssets) HeadMainAssets(c Context) {
 	p.mainHandler.ServeHTTP(c.Writer, c.Request)
 }
 
 // GetStaticAssets GET handler of "/static/*filepath"
-func (p *portalAssets) GetStaticAssets(c Context) {
+func (p *PortalAssets) GetStaticAssets(c Context) {
 	p.staticHandler.ServeHTTP(c.Writer, c.Request)
 }
 
 // HeadStaticAssets HEAD handler of "/static/*filepath"
-func (p *portalAssets) HeadStaticAssets(c Context) {
+func (p *PortalAssets) HeadStaticAssets(c Context) {
 	p.staticHandler.ServeHTTP(c.Writer, c.Request)
 }
 
 // mirPortal return a portal mir entry
-func mirPortal() interface{} {
+func MirPortal() interface{} {
 	assetFile := dist.AssetFile()
-	return &portalAssets{
+	return &PortalAssets{
 		mainHandler:   http.StripPrefix("/", http.FileServer(assetFile)),
 		staticHandler: http.StripPrefix("/static", http.FileServer(assetFile)),
 	}
