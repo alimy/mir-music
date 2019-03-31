@@ -1,13 +1,13 @@
-package info
+package serve
 
 import (
 	"github.com/alimy/mir-music/models"
-	"github.com/alimy/mir-music/module/openapi"
+	"github.com/alimy/mir-music/pkg/openapi"
 )
 
-// MirEntries get all entries that used to register to Mir
+// mirEntries get all entries that used to register to Mir
 // Notice: this func must call after models.InitWith(...)
-func MirEntries() []interface{} {
+func mirEntries() []interface{} {
 	ctx := models.NewContext()
 
 	entries := []interface{}{

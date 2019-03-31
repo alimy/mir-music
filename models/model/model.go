@@ -20,11 +20,11 @@ const (
 	DbSqlite3 = "sqlite3"
 
 	// EnvConfigFile indicate environment value for config file
-	EnvConfigFile = "OKMALL_CONFIG_FILE"
+	EnvConfigFile = "MIRMUSIC_CONFIG_FILE"
 
 	// EnvCertFile indicate environment value for cert file
-	EnvCertFile = "OKMALL_CERT_FILE"
+	EnvCertFile = "MIRMUSIC_CERT_FILE"
 
 	// EnvKeyFile indicate environment value for key file
-	EnvKeyFile = "OKMALL_KEY_FILE"
+	EnvKeyFile = "MIRMUSIC_KEY_FILE"
 )

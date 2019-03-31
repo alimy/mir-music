@@ -5,6 +5,7 @@ github.com/alimy/mir v1.0.0 h1:u0BAaBSE2pfdFg8RIigKhUgeIY0c5AEVvHVAdgFQpzA=
 github.com/alimy/mir v1.0.0/go.mod h1:JIZY+q16FJKFNm2/a9KgUmYpa6SpsT9i7hafdg7xBhQ=
 github.com/alimy/mir/module/gin v0.0.0-20190321111739-2009da5a1a34 h1:YekTumoO++ttJK/vl9W/Axrxe9XOeIDgmIf/FeUFOl4=
 github.com/alimy/mir/module/gin v0.0.0-20190321111739-2009da5a1a34/go.mod h1:dcBwULe+yzWG9zHcrwHpLU6X89WfZ7W9di/ENegp4eQ=
+github.com/alimy/music-ui v1.0.2 h1:jVZhXSnO6Dhlm6GzXjuYXhtuMeL60swbSo2BddWhzz0=
 github.com/alimy/music-ui v1.0.2/go.mod h1:rNC0wjiRL6MHAsbTXMVCwC+NEpsHjVgGRhGxR5Zg0YQ=
 github.com/coreos/go-semver v0.2.0 h1:3Jm3tLmsgAYcjC+4Up7hJrFBPr+n7rAqYeSw/SZazuY=
 github.com/coreos/go-semver v0.2.0/go.mod h1:nnelYz7RCh+5ahJtPPxZlU+153eP4D4r3EedlOD2RNk=

@@ -1,7 +1,6 @@
-package cmd
+package serve
 
 import (
-	"github.com/alimy/mir-music/module/serve/info"
 	"github.com/gin-gonic/gin"
 
 	mirE "github.com/alimy/mir/module/gin"
@@ -13,7 +12,7 @@ func newGin() *gin.Engine {
 	e := gin.Default()
 
 	// Register API
-	entries := info.MirEntries()
+	entries := mirEntries()
 	mirE.Register(e, entries...)
 
 	return e

@@ -1,10 +1,7 @@
 package version
 
 import (
-	"fmt"
-	"github.com/alimy/mir-music/cmd"
 	"github.com/coreos/go-semver/semver"
-	"github.com/spf13/cobra"
 )
 
 var (
@@ -52,18 +49,4 @@ var ApiVersion = semver.Version{
 	Patch:      ApiVersionPatch,
 	PreRelease: semver.PreRelease(ApiVersionPre),
 	Metadata:   ApiVersionDev,
-}
-
-func init() {
-	// version sub-command
-	versionCmd := &cobra.Command{
-		Use: "version",
-		Run: func(cmd *cobra.Command, args []string) {
-			fmt.Printf("%s (APIVersion:%s)\nBuildTime:%s\nBuildGitSHA:%s\n",
-				Version, ApiVersion, BuildTime, GitHash)
-		},
-	}
-
-	// Register version sub-command
-	cmd.Register(versionCmd)
 }
