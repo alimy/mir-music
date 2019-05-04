@@ -10,6 +10,7 @@ import (
 	"strconv"
 )
 
+// Media media info
 type Media struct {
 	group            mir.Group  `mir:"v1"`
 	getAlbums        mir.Get    `mir:"/albums/"`

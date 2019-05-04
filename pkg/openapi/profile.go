@@ -7,6 +7,7 @@ import (
 	"net/http"
 )
 
+// Profile simple profile
 type Profile struct {
 	group      mir.Group `mir:"v1"`
 	getAppInfo mir.Get   `mir:"/appinfo/"`

@@ -8,6 +8,7 @@ import (
 	"net/http"
 )
 
+// PortalAssets static assets
 type PortalAssets struct {
 	index            mir.Get  `mir:"/"`
 	getMainAssets    mir.Get  `mir:"/index.html#Index"`
